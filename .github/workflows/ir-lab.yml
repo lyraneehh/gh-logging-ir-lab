@@ -1,0 +1,27 @@
+name: IR Logging Lab
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  telemetry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Identity & system info
+        run: |
+          whoami
+          id
+          uname -a
+
+      - name: Environment variables (sanitized)
+        run: |
+          env | sort
+
+      - name: Simulated outbound network activity
+        run: |
+          curl -I https://example.com
