@@ -1,4 +1,3 @@
-# gh-logging-ir-lab
+## Pull Request Test
 
-This repository is used to generate and analyze GitHub public logs
-from an incident response and security monitoring perspective.
+This content exists only in a PR and is never merged.
